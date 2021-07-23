@@ -2,14 +2,14 @@
 const fastify = require('fastify')({ logger: true })
 
 class Server {
-	constructor({ port = 5000 }) {
+	constructor({ port = 6000 }) {
 		this.port = port
 	}
 
 	async declareRoutes() {
 		// Declare a route
 		fastify.get('/', async (request, reply) => {
-			return { hello: 'world', env: process.env.NODE_ENV }
+			return { hello: 'world', node: 'two', env: process.env.NODE_ENV }
 		})
 	}
 

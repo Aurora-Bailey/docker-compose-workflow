@@ -6,4 +6,12 @@ services:
     command: "npm run dev"
     environment:
       NODE_ENV: development
-      NODE_PORT: 3000
+      NODEJS_ONE_PORT: 3000
+
+  nodejs-two:
+    ports:
+      - "4000:4000"
+    command: "npm run dev"
+    environment:
+      NODE_ENV: development
+      NODEJS_TWO_PORT: 4000

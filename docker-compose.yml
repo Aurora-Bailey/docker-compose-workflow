@@ -6,3 +6,10 @@ services:
       - ./nodejs-one:/nodejs-one
     environment:
       VERSION: ${VERSION}
+
+  nodejs-two:
+    build: ./nodejs-two
+    volumes:
+      - ./nodejs-two:/nodejs-two
+    environment:
+      VERSION: ${VERSION}
