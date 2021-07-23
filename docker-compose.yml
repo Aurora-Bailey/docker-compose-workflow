@@ -2,6 +2,7 @@ version: "3.9"
 services:
   nodejs-one:
     build: ./nodejs-one
+    image: naisa/${PROJECT_NAME}_nodejs-one
     volumes:
       - ./nodejs-one:/nodejs-one
     environment:
@@ -9,6 +10,7 @@ services:
 
   nodejs-two:
     build: ./nodejs-two
+    image: naisa/${PROJECT_NAME}_nodejs-two
     volumes:
       - ./nodejs-two:/nodejs-two
     environment:

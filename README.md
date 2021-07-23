@@ -44,3 +44,14 @@ Production
 ```
 docker compose up -d --build
 ```
+
+Push to docker hub
+```
+docker compose build
+docker compose push
+```
+
+Pull from docker hub
+```
+docker compose pull
+```
