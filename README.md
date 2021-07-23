@@ -19,3 +19,22 @@ $ git branch -M main
 $ git remote add origin git@github.com:Aurora-Bailey/project-name.git
 $ git push -u origin main
 ```
+
+
+## Running project
+
+Dev
+```
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+```
+
+test
+```
+docker-compose -f docker-compose.dev.yml -f docker-compose.yml run collecting npm run test
+```
+
+
+Production
+```
+docker compose up -d --build
+```

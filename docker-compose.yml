@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  nodejs-one:
+    build: ./nodejs-one
+    volumes:
+      - ./nodejs-one:/nodejs-one
+    environment:
+      VERSION: ${VERSION}
