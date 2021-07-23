@@ -30,7 +30,7 @@ docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
 test
 ```
-docker compose -f docker-compose.yml -f docker-compose.dev.yml run nodejs-one npm run test
+docker compose -f docker-compose.yml -f docker-compose.dev.yml run --rm nodejs-one npm run test
 ```
 
 
