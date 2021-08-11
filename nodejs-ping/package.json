@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-ping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettify": "prettier -l --write \"**/*.js\"",
+    "test": "jest",
+    "dev": "nodemon index.js",
+    "production": "node index.js"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "useTabs": true,
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "author": "Aurora Bailey",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fastify": "^3.19.2"
+  }
+}

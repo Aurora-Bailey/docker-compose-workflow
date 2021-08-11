@@ -3,6 +3,8 @@ services:
   nodejs-one:
     build: ./nodejs-one
     image: naisa/${PROJECT_NAME}_nodejs-one
+    networks:
+      - nodejs-network
     volumes:
       - ./nodejs-one:/nodejs-one
     environment:
@@ -11,7 +13,22 @@ services:
   nodejs-two:
     build: ./nodejs-two
     image: naisa/${PROJECT_NAME}_nodejs-two
+    networks:
+      - nodejs-network
     volumes:
       - ./nodejs-two:/nodejs-two
     environment:
       VERSION: ${VERSION}
+
+  nodejs-ping:
+    build: ./nodejs-ping
+    image: naisa/${PROJECT_NAME}_nodejs-ping
+    networks:
+      - nodejs-network
+    volumes:
+      - ./nodejs-ping:/nodejs-ping
+    environment:
+      VERSION: ${VERSION}
+networks:
+  nodejs-network:
+    driver: bridge

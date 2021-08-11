@@ -15,3 +15,8 @@ services:
     environment:
       NODE_ENV: development
       NODEJS_TWO_PORT: 4000
+
+  nodejs-ping:
+    command: "npm run dev"
+    environment:
+      NODE_ENV: development
